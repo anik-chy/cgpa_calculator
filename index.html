@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative bg-gray-100 text-gray-600 flex items-center justify-center min-h-screen">
+    <!-- Background Image Wrapper -->
+    <div class="absolute inset-0 bg-cover bg-repeat opacity-5 block"
+        style="background-image: url('./public/assets/imgs/Designer.jpeg'); background-size: 40%;"></div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 max-w-2xl w-full bg-white shadow-lg rounded-lg p-6">
+        <h1 class="text-2xl font-bold mb-4 text-center flex items-center justify-center gap-2">
+            CGPA Calculator
+            <img src="./public/assets/svgs/graduation-cap-svgrepo-com.svg" class="h-10 w-10" alt="calculate-svg">
+        </h1>
+        <div id="inputSection" class="space-y-4">
+            <div>
+                <label for="currentCGPA" class="block font-medium">Current CGPA:</label>
+                <input type="text" id="currentCGPA"
+                    class="focus:outline-none focus:ring-2 focus:ring-emerald-600 mt-1 block w-full border rounded-md px-4 py-2"
+                    placeholder="Enter your current CGPA">
+            </div>
+            <div>
+                <label for="completedCredits" class="block font-medium">Number of Completed Credits:</label>
+                <input type="text" id="completedCredits"
+                    class="focus:outline-none focus:ring-2 focus:ring-emerald-600 mt-1 block w-full border rounded-md px-4 py-2"
+                    placeholder="Enter completed credits">
+            </div>
+            <!-- <div>
+                <input type="text" id="currentCourses" class="focus:outline-none focus:ring-2 focus:ring-emerald-600 mt-1 block w-full border rounded-md px-4 py-2" placeholder="Enter number of courses">
+            </div> -->
+
+            <label for="currentCourses" class="block font-medium">Number of Courses in Current Semester:</label>
+            <div id="courseTags" class="flex gap-2 mt-4">
+                <button data-courses="1"
+                    class="course-tag shadow-sm bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none transition-all duration-300 transform">
+                    1
+                </button>
+                <button data-courses="2"
+                    class="course-tag shadow-sm bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none transition-all duration-300 transform">
+                    2
+                </button>
+                <button data-courses="3"
+                    class="course-tag shadow-sm bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none transition-all duration-300 transform">
+                    3
+                </button>
+                <button data-courses="4"
+                    class="course-tag shadow-sm bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none transition-all duration-300 transform">
+                    4
+                </button>
+                <button data-courses="5"
+                    class="course-tag shadow-sm bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none transition-all duration-300 transform">
+                    5
+                </button>
+                <button data-courses="6"
+                    class="course-tag shadow-sm bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none transition-all duration-300 transform">
+                    6
+                </button>
+            </div>
+        </div>
+        <div id="coursesSection" class="mt-6 space-y-4 hidden opacity-0 transform scale-95 transition-all duration-500">
+            <form id="coursesForm" class="space-y-4"></form>
+            <button id="calculateCGPA"
+                class="w-full bg-emerald-500 text-white font-semibold py-2 rounded-md hover:bg-emerald-600 hidden">
+                Calculate CGPA
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen"
+        class="fixed inset-0 z-50 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden">
+        <img src="./public/assets/icons/rotate.gif" class="h-10 w-10" alt="calculating">
+    </div>
+
+    <!-- Result Modal -->
+    <div id="resultModal" class="fixed inset-0 z-50 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-6 text-center w-96">
+            <h2 class="text-xl font-bold mb-4">CGPA Result</h2>
+            <p id="result" class="text-lg font-semibold py-2"></p>
+            <blockquote id="msg" class="italic text-gray-700 p-4 border-l-4 border-emerald-400 bg-gray-100 rounded-md"></blockquote>
+            <button id="closeModal" class="mt-4 bg-rose-500 text-white py-2 px-4 rounded hover:bg-red-600">
+                Close
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./public/assets/js/script.js" type="module"></script>
