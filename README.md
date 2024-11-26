@@ -45,7 +45,7 @@ Follow these steps to set up and run the CGPA Calculator locally.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cgpa-calculator.git
+   git clone https://github.com/Iktisad/cgpa_calculator.git
    cd cgpa-calculator
    ```
 2. Ensure all required assets are in place:
