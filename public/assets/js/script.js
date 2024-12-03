@@ -186,11 +186,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show loading screen and calculate CGPA
     document.getElementById("calculateCGPA").addEventListener("click", () => {
-        const currentCGPA = parseFloat(document.getElementById("currentCGPA").value);
-        const completedCredits = parseFloat(document.getElementById("completedCredits").value);
+        let currentCGPA = parseFloat(document.getElementById("currentCGPA").value);
+        let completedCredits = parseFloat(document.getElementById("completedCredits").value);
         const loadingScreen = document.getElementById("loadingScreen");
-
+        
         if (!currentCGPA || !completedCredits || currentCGPA < 0 || completedCredits < 0) {
+            console.log(currentCGPA, completedCredits);
             alert("Please provide valid CGPA and completed credits.");
             return;
         }

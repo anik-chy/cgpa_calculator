@@ -4,6 +4,19 @@ The **CGPA Calculator** is a sleek and user-friendly web application that helps 
 
 ---
 
+## 🌟 Screenshots
+
+### Home Screen
+![Home Screen](./screenshots/home.png)
+
+### Course Selection
+![Course Selection](./screenshots/selection.png)
+
+### Result Modal
+![Result Modal](./screenshots/modal.png)
+
+---
+
 ## ✨ Features
 
 - **Dynamic Inputs**: 
@@ -80,14 +93,27 @@ Follow these steps to set up and run the CGPA Calculator locally.
 ## 📂 Folder Structure
 
 ```
-/public
-  /assets
-    /imgs         # Background images
-    /icons        # SVG and loading icons
-    /js           # JavaScript files (e.g., quotes.js)
-index.html         # Main HTML file
-script.js          # Core JavaScript logic
-README.md          # Project documentation
+cgpa_calculator                             
+├─ public                                   
+│  └─ assets                                
+│     ├─ icons                              
+│     │  └─ rotate.gif                      
+│     ├─ imgs                               
+│     │  └─ Designer.jpeg                   
+│     ├─ js                                 
+│     │  ├─ quotes.js                       
+│     │  └─ script.js                       
+│     └─ svgs                               
+│        ├─ calculate-svgrepo-com.svg       
+│        └─ graduation-cap-svgrepo-com.svg  
+├─ screenshots                              
+│  ├─ home.png                              
+│  ├─ modal.png                             
+│  └─ selection.png                         
+├─ LICENSE                                  
+├─ README.md                                
+└─ index.html                               
+
 ```
 
 ---
@@ -116,23 +142,9 @@ Customize the styling directly in `index.html` or `script.js` by modifying Tailw
 
 ---
 
-## 🌟 Screenshots
-
-### Home Screen
-![Home Screen](./screenshots/home.png)
-
-### Course Selection
-![Course Selection](./screenshots/selection.png)
-
-### Result Modal
-![Result Modal](./screenshots/modal.png)
-
----
-
 ## 🎯 To-Do List
 
 - [ ] Add **dark mode** support.
-- [ ] Implement saving for past CGPA calculations.
 - [ ] Expand the pool of motivational quotes.
 - [ ] Add multi-language support for quotes.
 
