@@ -131,19 +131,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     <label for="gpa${i}" class="block font-medium">GPA for Course ${i}:</label>
                     <div class="relative mt-1">
                         <select id="gpa${i}" class="appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-600 block w-full border rounded-md px-4 py-2">
-                            <option selected value="0.0">0.0</option>
-                            <option value="4.3">4.3</option>
-                            <option value="4.0">4.0</option>
-                            <option value="3.7">3.7</option>
-                            <option value="3.3">3.3</option>
-                            <option value="3.0">3.0</option>
-                            <option value="2.7">2.7</option>
-                            <option value="2.3">2.3</option>
-                            <option value="2.0">2.0</option>
-                            <option value="1.7">1.7</option>
-                            <option value="1.3">1.3</option>
-                            <option value="1.0">1.0</option>
-                            <option value="0.7">0.7</option>
+                            <option value="4.3">4.3 (A+)</option>
+                            <option value="4.0">4.0 (A)</option>
+                            <option value="3.7">3.7 (A-)</option>
+                            <option value="3.3">3.3 (B+)</option>
+                            <option value="3.0">3.0 (B)</option>
+                            <option value="2.7">2.7 (B-)</option>
+                            <option value="2.3">2.3 (C+)</option>
+                            <option value="2.0">2.0 (C)</option>
+                            <option value="1.7">1.7 (C-)</option>
+                            <option value="1.3">1.3 (D+)</option>
+                            <option value="1.0">1.0 (D)</option>
+                            <option value="0.7">0.7 (D-)</option>
+                            <option selected value="0.0">0.0 (F)</option>
                         </select>
                         <!-- Dropdown SVG Icon -->
                         <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let completedCredits = parseFloat(document.getElementById("completedCredits").value);
         const loadingScreen = document.getElementById("loadingScreen");
         
-        if (!currentCGPA || !completedCredits || currentCGPA < 0 || completedCredits < 0) {
+        if (currentCGPA < 0 || completedCredits < 0 || currentCGPA < 0 || completedCredits < 0) {
             console.log(currentCGPA, completedCredits);
             alert("Please provide valid CGPA and completed credits.");
             return;
